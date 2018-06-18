@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}关于本人{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<h1>About</h1><hr>
+			<h3>关于我</h3>
+			<font size="4" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">&nbsp; &nbsp; &nbsp;我是一个刚刚入职的<b style="box-sizing: border-box;"><font color="#800000" style="box-sizing: border-box;">汽车软件程序猿</font></b>，目前在上海某合资企业工作。</font><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">研究生毕业于华中科技大学，研究的方向是发动机电子控制。</span><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">平时喜欢写作，也爱分享，无奈平时工作太忙，只能偶尔更新。</span>
+			<h3>联系我</h3>
+			<font size="4" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">&nbsp; &nbsp; &nbsp;<a href="http://zhihu.com/people/tie-xiao-tie-93">知乎：吃完饭后不刷牙</a></font><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">&nbsp; &nbsp; &nbsp;<a href="https://zhuanlan.zhihu.com/c_65033682">知乎专栏：汽车控制器</a></span><span style="color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">&nbsp; &nbsp; &nbsp;</span><a href="mailto:little_iron@foxmail.com" style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">邮箱：little_iron</a>
+			<h3>关于本站</h3>
+			<p><font size="4" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">&nbsp; &nbsp; &nbsp;这里记录着一个菜鸟汽车软件程序猿的成长之路</font><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;">。</span></p>
+
+			<table>
+			  <tbody>
+				 <tr>
+				  <td>2017.05.30</td>
+				  <td>成功部署在新浪SAE上，后台MYSQL数据库调试成功。</td>
+				</tr>
+				 <tr>
+				  <td>2017.05.13</td>
+				  <td>从最基本的博客搭建开始学起，Python + Flask 不知道啥时候才能正式上线~ </td>
+				</tr>
+				<tr>
+				  <td>2016.07.22</td>
+				  <td>开始搭建自己的公众号：汽车ECU设计。虽然现在粉丝并不多，但还是希望自己能就这样一直写下去！</td>
+				</tr>
+				<tr>
+				  <td>2016.07.08</td>
+				  <td>由于公司不能使用Matlab了，从头开始自学Python，真的后悔自己为啥没有早点开始学习。</td>
+				</tr>
+				<tr>
+				  <td>2016.06.28</td>
+				  <td>从华科毕业后的第五天，签下了人生第一份工作，开始了自己软件攻城狮的大坑之旅！</td>
+				</tr>
+			  </tbody>
+			</table>
+
+			<!--COMMENTS-->
+			<h2 id="comments">Comments</h2>
+			<!--PC版-->
+			<div id="SOHUCS" ></div>
+			<script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
+			<script type="text/javascript">
+			window.changyan.api.config({
+			appid: 'cyt2wOIgh',
+			conf: 'prod_374465985311229072316cba563f0c3e'
+			});
+			</script>
+		</div>
+		
+		<div class="col-md-1 column"></div>
+		<div class="col-md-3 column">
+			<img alt="140x140" src="http://iron-flask.stor.sinaapp.com/static/qrcode_for_gh_57b47118845d_258.jpg" />
+			<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汽车ECU设计</h2><hr>
+			<h3 id="dashang">支持本站</h3>
+			<p><font size="4" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">&nbsp; &nbsp;给站长打赏个饮料钱吧！</font><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;"></span></p>
+			<a href="../paper/12"><img src="http://iron-flask.stor.sinaapp.com/static/zhifu.jpg" /></a>
+		</div>
+	</div>
+</div>
+
+{{ super() }}
+{% endblock %}

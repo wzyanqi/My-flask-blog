@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% block title %}博文标签{% endblock %}
+{% block content %}
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-9 column">
+			<h1>Tag</h1><br>
+			{% for tag_name in tag_dict %}
+			<p id="{{tag_name}}"><h3>{{tag_name}}</h3><hr></p>
+			{% for paper in tag_dict[tag_name]%}
+			<div class="col-md-2 column">
+				<i class="fa fa-star-o"></i>&nbsp;&nbsp;&nbsp;{{all_post[paper].time.strftime('%Y-%m-%d')}}
+			</div>
+			<div class="col-md-3 column">
+				<a href="../../paper/{{all_post[paper].id}}"><B>{{all_post[paper].title}}</B></a>
+			</div>
+			<div class="col-md-2 column">
+				<i class="fa fa-th-list"></i>
+				<a href="../../category#{{all_post[paper].type}}">{{all_post[paper].type}}</a>
+			</div>
+			{% set tag_list = all_post[paper].tag.split('#') %}
+			<div class="col-md-5 column">
+				{% for tag in tag_list %}
+				<i class="fa fa-tag"></i>
+				<a href="#{{tag}}">{{tag}}</a>&nbsp;&nbsp;
+				{% endfor %}
+			</div><br><br>
+			{% endfor %}
+			{% endfor %}
+		</div>
+
+		<div class="col-md-3 column">
+			<img alt="140x140" src="http://iron-flask.stor.sinaapp.com/static/qrcode_for_gh_57b47118845d_258.jpg" />
+			<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;汽车ECU设计</h2><hr>
+			<h3 id="dashang">支持本站</h3>
+			<p><font size="4" style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;">&nbsp; &nbsp;给站长打赏个饮料钱吧！</font><span style="box-sizing: border-box; color: rgb(51, 51, 51); font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: large;"></span></p>
+			<a href="../paper/12"><img src="http://iron-flask.stor.sinaapp.com/static/zhifu.jpg" /></a>
+			<div class="tag_cat">
+				<h2>分类目录</h2>
+				{% for cat in cat_dict %}
+				<li class="cat-item cat-item-3663"><a href="../../category#{{cat}}" >{{cat}}</a>({{cat_dict[cat]|length}})</li>
+				{% endfor %}
+				<h2>Tags</h2>
+				{% for tag in tag_dict %}
+				{% if tag_dict[tag]|length > 1 %}
+				<a href="../tag#{{tag}}" style="font-size: 12pt; color: #666;">{{tag}}</a>&nbsp;&nbsp;
+				{% else %}
+				<a href="../tag#{{tag}}" style="font-size: 9.5pt; color: #888;">{{tag}}</a>&nbsp;&nbsp;
+				{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+{{ super() }}
+{% endblock %}

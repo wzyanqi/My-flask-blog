@@ -1,0 +1,98 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}一个汽车程序猿{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="shortcut icon" href="http://iron-flask.stor.sinaapp.com/static/favicon.ico" type="image/x-icon">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<style type="text/css">
+html{height:100%;}
+body { position: relative; min-height: 100%; padding-bottom: 190px; }
+.mytop {width:20px;height:150px;position:fixed;right:50px;bottom:0px;}
+.site-footer { position: absolute; right: 0; bottom: 0; left: 0; text-align: center; background-color: #2b2b3c; box-shadow: 0 -2px 4px 1px rgba(0, 0, 0, 0.5); color: #bbb; }
+.site-footer .wrapper { width: 1140px; margin: 0 auto; padding: 15px 0; text-align: center; font-size: 14px; }
+.site-footer .wrapper p { margin: 0; line-height: 1.6; }
+.site-footer .wrapper .contact { display: inline-block; }
+.site-footer .wrapper .contact a { color: #ccc; transition: 0.3s ease; }
+.site-footer .wrapper .contact a:hover { color: #fff; }
+.site-footer .wrapper .contact a i { margin: 0 5px; font-size: 20px; }
+.site-footer .wrapper .description { display: inline-block; }
+.site-footer .wrapper .power a { color: #8F90C5; transition: 0.3s ease; }
+.site-footer .wrapper .power a:hover { color: #fff; }
+@media screen and (max-width: 1200px) and (min-width: 770px) { .site-footer .wrapper { width: 90%; } }
+@media screen and (max-width: 770px) { .site-footer .wrapper { width: 90%; } }
+
+table { border-top: 2px solid #777; border-bottom: 2px solid #777; margin: 8px 0; border-collapse: collapse; }
+table thead { border-bottom: 1px solid #777; background-color: #aaa; color: #fff; }
+table th { padding: 2px 10px; text-align: left; }
+table tbody tr:nth-of-type(2n+1) { background-color: #f8f8fd; }
+table tbody tr:nth-of-type(2n) { background-color: #e5eaed; }
+table td { padding: 2px 10px; }
+</style>
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation"> 
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" 
+			data-toggle="collapse" data-target=".navbar-collapse"> 
+			<span class="sr-only">Toggle navigation</span> 
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		<a class="navbar-brand" href="/"><i class="fa fa-home"></i> 吃完饭后不刷牙</a>
+		</div>
+		<div class="navbar-collapse collapse"> 
+			<ul class="nav navbar-nav">
+			<li><a href="/category"><i class="fa fa-th-list"></i> 目录</a></li>
+			<li><a href="/tag"><i class="fa fa-tags"></i> 标签</a></li>
+			<li><a href="/about"><i class="fa fa-heart"></i> 关于本人</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="mytop">
+	<a href="javascript:scrollTo(0,0)">
+	<img src="http://iron-flask.stor.sinaapp.com/static/5-120601160021-50.gif" /></a>
+</div>
+
+<footer class="site-footer">
+	<div class="wrapper">
+		<p class="description">一个菜鸟汽车程序猿的成长之路</p>
+		<p class="contact">Contact me at:
+		<a href="https://www.zhihu.com/people/tie-xiao-tie-93" title="Zhihu"><i class="fa fa-user-o" aria-hidden="true"></i></a>
+		<a href="mailto:little_iron@foxmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+		<a href="http://weibo.com/irontosheal"><i class="fa fa-weibo" aria-hidden="true"></i></a></p>
+		<p>本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次</p>
+		<p class="power">
+		<span>Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.</span>
+		<span>Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.</span>
+		</p>
+	</div>
+</footer>
+{% endblock %}
+
+{% block scripts %}
+{{ super()}}
+<!--
+{% endblock %}
