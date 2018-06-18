@@ -8,7 +8,7 @@
 - mangage.py 起动博客
 - dev.sql 测试模式下使用的数据库
 - index.wsgi 新浪SAE模式
-- venv.zip venv环境,需要解压到当前文件夹
+- venv.zip venv环境，需要解压到当前文件夹
 - requirements.txt 安装环境
 
 ![](https://i.imgur.com/iZPv09g.png)
@@ -33,5 +33,10 @@
         abstract = db.Column(db.Text)	#摘要
         content = db.Column(db.Text)	#内容
 数据库内容包括以上几个方面，在dev.sql编辑可以直接实现。文章内容请用Markdown撰写后，再用**migrations/markdown2html.py**生成后输入到content中即可。
+### 如何在本地起动？
+在cmd中输入如下代码：
 
-
+    cd 目录\myweb\
+    venv\Scripts\activate
+    python manage.py runserver
+最后在浏览器中输入127.0.0.1:5000/，就大功告成了。Enjoy and have fun！
